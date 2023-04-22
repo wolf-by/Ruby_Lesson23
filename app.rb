@@ -19,14 +19,15 @@ get '/visit' do
 	erb :visit
 end
 
-post '/visit' do
+post '/visit' do 
 	@username = params[:username]
 	@phone = params[:phone]
 	@master = params[:value]
 	@datetime = params[:datetime]
+ 	@color = params[:color]
 
 	f = File.open './public/users.txt', 'a'
-	f.write "Клиент: #{@username}, Телефон: #{@phone}, Парикмахер: #{@master}, Дата и время: #{@datetime}\n"
+	f.write "Клиент: #{@username}, Телефон: #{@phone}, Парикмахер: #{@master}, Дата и время: #{@datetime}\n, Цвет краски: #{@color}."
 	f.close
 
 	erb :visit
