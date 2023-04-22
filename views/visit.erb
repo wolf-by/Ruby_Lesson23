@@ -4,11 +4,11 @@
 <form action="/visit" method="POST">
   <div class="mb-3">
     <label>Ваше имя</label>
-    <input name="username" type="text" class="form-control" placeholder="Введите имя">
+    <input id="aaa" name="username" type="text" class="form-control" placeholder="Введите имя">
   </div>
   <div class="mb-3">
     <label>Ваш телефон</label>
-    <input name="phone" type="text" class="form-control" placeholder="Введите телефон">
+    <input id="bbb" name="phone" type="text" class="form-control" placeholder="Введите телефон">
   </div>
 </br> 
 <select name="value" type="text" class="form-select" aria-label="Default select example">
@@ -17,15 +17,16 @@
   <option>Jessie Pinkman</option>
   <option>Gus Fring</option>
 </select>
-
-
-  <div class="mb-3">
+<div class="mb-3">
     <label>Дата и время</label>
-    <input name="datetime" type="text" class="form-control" placeholder="Введите дату и время">
+    <input name="datetime" type="text" class="form-control ccc" placeholder="Введите дату и время">
   </div>
   </br> 
   <button type="submit" class="btn btn-primary">Записаться</button>
 </form>
+
 <script type="text/javascript">
-alert('Hello from visit page!');
+$('#aaa').css('background-color','yellow');
+$('#bbb').css('background-color','blue');
+$('.ccc').css('background-color', 'red');
 </script>
