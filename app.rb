@@ -27,7 +27,7 @@ post '/visit' do
  	@color = params[:color]
 
 	f = File.open './public/users.txt', 'a'
-	f.write "Клиент: #{@username}, Телефон: #{@phone}, Парикмахер: #{@master}, Дата и время: #{@datetime}\n, Цвет краски: #{@color}."
+	f.write "Клиент: #{@username}, Телефон: #{@phone}, Парикмахер: #{@master}, Дата и время: #{@datetime}, Цвет краски: #{@color}.\n"
 	f.close
 
 	erb :visit
