@@ -45,9 +45,22 @@
 </form>
 
 <script type="text/javascript">
-$('#color').simplecolorpicker();  
-
 $('#aaa').css('background-color','white');
 $('#bbb').css('background-color','#fff');
 $('.ccc').css('background-color', '#fff');
 </script>
+
+<!-- Верный синтаксис -->
+<script type="text/javascript">
+$(function () {
+
+  $('#color').simplecolorpicker();  
+
+});
+</script>
+
+<!--[if lt неверный синтаксис, требуется использовать function]>
+<script type="text/javascript">
+$('#color').simplecolorpicker();  
+</script>
+<![endif]-->
